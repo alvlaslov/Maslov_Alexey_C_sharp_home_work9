@@ -20,18 +20,21 @@ else
     else
     {
         int sum = 0;
-        Console.WriteLine("The sum of natural numbers = ");
+        Console.WriteLine("The sum of natural numbers between M and N: ");
         SumOfNaturalNumbers(numberM, numberN, sum);
     }
 }
 
 void SumOfNaturalNumbers(int numberM, int numberN, int sum)
 {
-    Console.WriteLine(sum);
     if (numberM > numberN) return;
     {
         sum += numberM;
     }
     numberM++;
     SumOfNaturalNumbers(numberM, numberN, sum);
+    if (numberM > numberN)
+    {
+        Console.Write(sum);
+    }
 }
